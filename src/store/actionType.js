@@ -1,0 +1,12 @@
+export const LOGIN = "LOGIN";
+export const REGISTER = "REGISTER";
+export const LOGOUT = "LOGOUT";
+export const AUTH_LOADING = "AUTH_LOADING";
+export const AUTH_ERROR = "AUTH_ERROR";
+export const SEARCH_PRODUCT = "SEARCH_PRODUCT";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const EDIT_PRODUCT = "EDIT_PRODUCT";
+export const DELETE_PRODUCT = "DELETE_PRODUCT";
+export const CLEAR_PRODUCT = "CLEAR_PRODUCT";
+export const PRODUCT_LOADING = "PRODUCT_LOADING";
+export const PRODUCT_ERROR = "PRODUCT_ERROR";
