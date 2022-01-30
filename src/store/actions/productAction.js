@@ -1,4 +1,5 @@
 import getApi from "../../helpers/getApi";
+import { setHeaders } from "../../helpers/headers";
 import * as types from "../actionType";
 import { toast } from "react-toastify";
 
@@ -14,7 +15,7 @@ export const getProduct = (sku) => {
   return (dispatch) => {
     dispatch(isLoading());
     getApi
-      .post("/item/search", sku)
+      .post("/item/search", sku, setHeaders())
       .then((response) => {
         dispatch({
           type: types.SEARCH_PRODUCT,
@@ -39,7 +40,7 @@ export const addProduct = (item, history) => {
   return (dispatch) => {
     dispatch(isLoading());
     getApi
-      .post("/item/add", item)
+      .post("/item/add", item, setHeaders())
       .then((response) => {
         if (response.data.id) {
           toast.success("Product successfully added", {
@@ -69,7 +70,7 @@ export const editProduct = (product, history) => {
   return (dispatch) => {
     dispatch(isLoading());
     getApi
-      .post("/item/update", product)
+      .post("/item/update", product, setHeaders())
       .then(() => {
         toast.success("Product successfully updated", {
           position: toast.POSITION.TOP_RIGHT,
@@ -92,7 +93,7 @@ export const deleteProduct = (id) => {
   return (dispatch) => {
     dispatch(isLoading());
     getApi
-      .post("/item/delete", id)
+      .post("/item/delete", id, setHeaders())
       .then(() => {
         toast.success("Product successfully deleted", {
           position: toast.POSITION.TOP_RIGHT,

@@ -166,7 +166,7 @@ const AddEdit = () => {
                 Cancel
               </Button>
               <Button variant="primary" type="submit" disabled={loading}>
-                {id ? "Update" : "Save"}
+                {id ? "Update" : "Add"}
               </Button>
             </Form.Group>
           </Form>
