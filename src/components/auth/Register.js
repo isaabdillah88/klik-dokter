@@ -29,10 +29,6 @@ const Register = () => {
       });
     } else {
       dispatch(register(user, history));
-      setUser({
-        email: "",
-        password: "",
-      });
     }
   };
 

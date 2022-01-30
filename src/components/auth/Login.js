@@ -29,10 +29,6 @@ const Login = () => {
       });
     } else {
       dispatch(login(creds, history));
-      setCreds({
-        email: "",
-        password: "",
-      });
     }
   };
 
